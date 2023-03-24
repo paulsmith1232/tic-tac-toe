@@ -15,6 +15,17 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #cbdfbd;
+}
+
+body h1 {
+  margin-top: 40px;
+  font-size: 40px;
+  color: #a44a3f;
+}
+
+.game-message {
+  margin-top: 20px;
 }
 
 .game-board {
@@ -22,18 +33,68 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   text-align: center;
   gap: 20px;
-  background-color: black;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .cell {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 120px;
+  font-size: 100px;
   cursor: pointer;
-  background-color: white;
+  background-color: #f6f4d2;
+  border: none;
+  border-radius: 10px;
+}
+
+.reset-button {
+  margin-top: 40px;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 0;
+  cursor: pointer;
+  display: inline-block;
+  width: 200px;
+  background-color: #f19c79;
+}
+
+.end-game-container {
+  display: grid;
+  background: hsla(50, 100%, 50%, 0.7);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.end-game-container.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.end-game-message {
+  /* max-width: 600px;
+  min-width: 400px; */
+  padding: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  /* min-height: 200px; */
+  background: white;
+}
+
+.hidden {
+  display: none;
 }
